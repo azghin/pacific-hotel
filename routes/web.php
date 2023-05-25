@@ -13,21 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
+Route::group(['prefix' => 'client','as'=>'client.'],function () {
+    Route::view('home', 'clients.home')->name('home');
+    Route::view('rooms', 'clients.rooms')->name('rooms');
+    Route::view('about', 'clients.about_us')->name('about');
+    Route::view('contact', 'clients.contact')->name('contact');
+    Route::view('reservation', 'clients.reservation')->name('reservation');
+    
 });
 
-Route::get('/rooms', function () {
-    return view('rooms');
-});
- Route::get('/about',function(){
-    return view('about_us');
- });
-
- Route::get('/contact', function () {
-     return view('contact');
- });
-
- Route::get('/reservation', function () {
-     return view('reservation');
- });

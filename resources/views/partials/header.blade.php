@@ -18,12 +18,12 @@
                 <div class="row full-height align-items-center">
                   <div class="col-md-6 mx-auto">
                     <ul class="list-unstyled menu">
-                      <li class="active"><a href="/">Home</a></li>
-                      <li><a href="/rooms">Rooms</a></li>
-                      <li><a href="/about">About</a></li>
-                      {{-- <li><a href="events.html">Events</a></li> --}}
-                      <li><a href="/contact">Contact</a></li>
-                      <li><a href="/reservation">Reservation</a></li>
+                      <li class="active"><a href="{{ Route('client.home') }}">Home</a></li>
+                      <li><a href="{{ Route('client.rooms') }}">Rooms</a></li>
+                      <li><a href="{{ Route('client.about') }}">About</a></li>
+                      {{-- <li><a href="#">Events</a></li> --}}
+                      <li><a href="{{ Route('client.contact') }}">Contact</a></li>
+                      <li><a href="{{ Route('client.reservation') }}">Reservation</a></li>
                     </ul>
                   </div>
                 </div>

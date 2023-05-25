@@ -22,3 +22,4 @@ Route::group(['prefix' => 'client','as'=>'client.'],function () {
     
 });
 
+Route::view('master', 'layouts.master');

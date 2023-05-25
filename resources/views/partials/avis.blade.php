@@ -10,7 +10,7 @@
           
           <div class="testimonial text-center slider-item">
             <div class="author-image mb-3">
-              <img src="images/person_1.jpg" alt="Image placeholder" class="rounded-circle mx-auto">
+              <img src="../images/person_1.jpg" alt="Image placeholder" class="rounded-circle mx-auto">
             </div>
             <blockquote>
 
@@ -21,7 +21,7 @@
 
           <div class="testimonial text-center slider-item">
             <div class="author-image mb-3">
-              <img src="images/person_2.jpg" alt="Image placeholder" class="rounded-circle mx-auto">
+              <img src="../images/person_2.jpg" alt="Image placeholder" class="rounded-circle mx-auto">
             </div>
             <blockquote>
               <p>&ldquo;Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.&rdquo;</p>
@@ -31,7 +31,7 @@
 
           <div class="testimonial text-center slider-item">
             <div class="author-image mb-3">
-              <img src="images/person_3.jpg" alt="Image placeholder" class="rounded-circle mx-auto">
+              <img src="../images/person_3.jpg" alt="Image placeholder" class="rounded-circle mx-auto">
             </div>
             <blockquote>
 
@@ -43,7 +43,7 @@
 
           <div class="testimonial text-center slider-item">
             <div class="author-image mb-3">
-              <img src="images/person_1.jpg" alt="Image placeholder" class="rounded-circle mx-auto">
+              <img src="../images/person_1.jpg" alt="Image placeholder" class="rounded-circle mx-auto">
             </div>
             <blockquote>
 
@@ -54,7 +54,7 @@
 
           <div class="testimonial text-center slider-item">
             <div class="author-image mb-3">
-              <img src="images/person_2.jpg" alt="Image placeholder" class="rounded-circle mx-auto">
+              <img src="../images/person_2.jpg" alt="Image placeholder" class="rounded-circle mx-auto">
             </div>
             <blockquote>
               <p>&ldquo;Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.&rdquo;</p>
@@ -64,7 +64,7 @@
 
           <div class="testimonial text-center slider-item">
             <div class="author-image mb-3">
-              <img src="images/person_3.jpg" alt="Image placeholder" class="rounded-circle mx-auto">
+              <img src="../images/person_3.jpg" alt="Image placeholder" class="rounded-circle mx-auto">
             </div>
             <blockquote>
 

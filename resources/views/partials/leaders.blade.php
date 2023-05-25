@@ -10,7 +10,7 @@
       <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
         <div class="block-2">
           <div class="flipper">
-            <div class="front" style="background-image: url(images/person_3.jpg);">
+            <div class="front" style="background-image: url(../images/person_3.jpg);">
               <div class="box">
                 <h2>Will Peters</h2>
                 <p>President</p>
@@ -35,7 +35,7 @@
       <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
         <div class="block-2"> <!-- .hover -->
           <div class="flipper">
-            <div class="front" style="background-image: url(images/person_1.jpg);">
+            <div class="front" style="background-image: url(../images/person_1.jpg);">
               <div class="box">
                 <h2>Jane Williams</h2>
                 <p>Business Manager</p>
@@ -60,7 +60,7 @@
       <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
         <div class="block-2">
           <div class="flipper">
-            <div class="front" style="background-image: url(images/person_2.jpg);">
+            <div class="front" style="background-image: url(../images/person_2.jpg);">
               <div class="box">
                 <h2>Jeffrey Neddery</h2>
                 <p>Marketing Director</p>

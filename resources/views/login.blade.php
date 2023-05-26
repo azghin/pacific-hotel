@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Login</title>
 </head>
 
@@ -321,16 +322,16 @@ footer a {
 
 <script>
     const signUpButton = document.getElementById('signUp');
-const signInButton = document.getElementById('signIn');
-const container = document.getElementById('container');
+	const signInButton = document.getElementById('signIn');
+	const container = document.getElementById('container');
 
-signUpButton.addEventListener('click', () => {
-	container.classList.add("right-panel-active");
-});
+	signUpButton.addEventListener('click', () => {
+		container.classList.add("right-panel-active");
+	});
 
-signInButton.addEventListener('click', () => {
-	container.classList.remove("right-panel-active");
-});
+	signInButton.addEventListener('click', () => {
+		container.classList.remove("right-panel-active");
+	});
 </script>
 </body>
 </html>

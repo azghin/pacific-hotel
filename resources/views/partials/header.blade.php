@@ -38,7 +38,7 @@
     <div class="container">
       <div class="row site-hero-inner justify-content-center align-items-center">
         <div class="col-md-10 text-center" data-aos="fade-up">
-          <span class="custom-caption text-uppercase text-white d-block  mb-3">Welcome To 5 <span class="fa fa-star text-primary"></span>   Hotel</span>
+          <span class="custom-caption text-uppercase text-white d-block  mb-3">Welcome To 5 <i class="fa fa-sharp fa-solid fa-star" style="color: #ffe224;"></i>  Hotel</span>
           <h1 class="heading">A Best Place To Stay</h1>
         </div>
       </div>

@@ -14,7 +14,7 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->string('email')->unique();
             $table->string('phone_number');
-            $table->enum('user_type', ['admin', 'client']);
+            $table->enum('user_type', ['admin', 'client'])->default('client');
             // Add any other fields you need
             $table->timestamps();
         });

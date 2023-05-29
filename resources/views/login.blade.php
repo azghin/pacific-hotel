@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+	
     <title>Login</title>
 </head>
 
@@ -266,7 +268,8 @@ footer a {
 <h2>Weekly Coding Challenge #1: Sign in/up Form</h2>
 <div class="container" id="container">
 	<div class="form-container sign-up-container">
-		<form action="#">
+		<form action="/createUser" method="post" >
+			@csrf
 			<h1>Create Account</h1>
 			<div class="social-container">
 				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
@@ -274,14 +277,28 @@ footer a {
 				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
 			</div>
 			<span>or use your email for registration</span>
-			<input type="text" placeholder="Name" />
-			<input type="email" placeholder="Email" />
-			<input type="password" placeholder="Password" />
+			<input type="text" name="name" placeholder="Name" value="{{ old('name') }}" />
+			@error('name')
+			 <span class="text-muted">{{ $message }}</span>
+			@enderror
+			<input type="tel" name="phone" id="phone"  placeholder="Phone Number"  value="{{ old('phone') }}"  />
+			@error('phone')
+			 <span class="text-muted">{{ $message }}</span>
+			@enderror
+			<input type="email" name="email" placeholder="Email"  value="{{ old('email') }}"  />
+			@error('email')
+			 <span class="text-muted">{{ $message }}</span>
+			@enderror
+			<input type="password" name="password" placeholder="Password" />
+			@error('password')
+			 <span class="text-muted">{{ $message }}</span>
+			@enderror
 			<button>Sign Up</button>
 		</form>
 	</div>
 	<div class="form-container sign-in-container">
-		<form action="#">
+		<form action="/login" method="post">
+			@csrf
 			<h1>Sign in</h1>
 			<div class="social-container">
 				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
@@ -289,8 +306,14 @@ footer a {
 				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
 			</div>
 			<span>or use your account</span>
-			<input type="email" placeholder="Email" />
-			<input type="password" placeholder="Password" />
+			<input type="email" placeholder="Email" name="email" value="{{ old('email') }}" >
+			@error('email')
+			 <span class="text-muted">{{ $message }}</span>
+			@enderror
+			<input type="password" placeholder="Password" name="password" >
+			@error('password')
+			 <span class="text-muted">{{ $message }}</span>
+			@enderror
 			<a href="#">Forgot your password?</a>
 			<button>Sign In</button>
 		</form>
@@ -332,6 +355,9 @@ footer a {
 	signInButton.addEventListener('click', () => {
 		container.classList.remove("right-panel-active");
 	});
+
+	
+	
 </script>
 </body>
 </html>

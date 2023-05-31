@@ -28,6 +28,7 @@ Route::group(['prefix' => 'client','as'=>'client.','middleware'=> 'isClient'],fu
 Route::group(['prefix' => 'admin','as'=>'admin.','middleware'=>['auth','isAdmin']],function () {
     Route::view('dashboard', 'admin.dashboard')->name('dashboard');
     Route::view('users', 'admin.users')->name('users');
+    Route::view('profil', 'admin.profil')->name('profil');
     
 });
 

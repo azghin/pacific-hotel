@@ -37,7 +37,7 @@ Route::view('/', 'login')->name('login');
 Route::post('/login', [LoginController::class , 'login']);
 Route::post('/createUser', [UserController::class , 'store']);
 
-
+Route::view('/admin', 'admin.newroom');
 
 
 Route::fallback(

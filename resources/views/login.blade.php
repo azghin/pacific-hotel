@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+	<!-- CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+	<!-- JavaScript -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 	
     <title>Login</title>
 </head>
@@ -27,6 +32,12 @@ body {
 	font-family: 'Montserrat', sans-serif;
 	height: 100vh;
 	margin: -20px 0 50px;
+}
+.form-inline{
+	padding: 0 15px;
+	margin: 2px 0;
+	width: 100%;
+	display : inline;
 }
 
 h1 {
@@ -310,10 +321,11 @@ footer a {
 			@error('email')
 			 <span class="text-muted">{{ $message }}</span>
 			@enderror
-			<input type="password" placeholder="Password" name="password" >
+			<input type="password" placeholder="Password" name="password" id="password">
 			@error('password')
 			 <span class="text-muted">{{ $message }}</span>
 			@enderror
+			<input type="checkbox" name="check" id="check">show Password
 			<a href="#">Forgot your password?</a>
 			<button>Sign In</button>
 		</form>
@@ -347,6 +359,8 @@ footer a {
     const signUpButton = document.getElementById('signUp');
 	const signInButton = document.getElementById('signIn');
 	const container = document.getElementById('container');
+	const check = document.getElementById('check');
+	const password = document.getElementById('password');
 
 	signUpButton.addEventListener('click', () => {
 		container.classList.add("right-panel-active");
@@ -356,6 +370,15 @@ footer a {
 		container.classList.remove("right-panel-active");
 	});
 
+	check.onclick = togglePassword;
+
+	function togglePassword() {
+		if (check.checked) {
+			password.type = "text";
+		} else {
+			password.type = "password";
+		}
+	}
 	
 	
 </script>

@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\CardRoomController;
+use App\Http\Controllers\RoomController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,9 +18,10 @@ use App\Http\Controllers\LoginController;
 |
 */
 
-Route::group(['prefix' => 'client','as'=>'client.','middleware'=> 'isClient'],function () {
-    Route::view('home', 'clients.home')->name('home');
-    Route::view('rooms', 'clients.rooms')->name('rooms');
+Route::view('/', 'clients.home')->name('home');
+
+Route::group(['prefix' => 'client','as'=>'client.','middleware'=>['auth','isClient']],function () { 
+    Route::get('rooms' , [CardRoomController::class , 'index'])->name('rooms');
     Route::view('about', 'clients.about_us')->name('about');
     Route::view('contact', 'clients.contact')->name('contact');
     Route::view('reservation', 'clients.reservation')->name('reservation');
@@ -29,15 +32,22 @@ Route::group(['prefix' => 'admin','as'=>'admin.','middleware'=>['auth','isAdmin'
     Route::view('dashboard', 'admin.dashboard')->name('dashboard');
     Route::view('users', 'admin.users')->name('users');
     Route::view('profil', 'admin.profil')->name('profil');
+    Route::get('rooms', [RoomController::class , 'index'])->name('rooms');
+    Route::get('newroom', [RoomController::class , 'create'])->name('newroom');
+    Route::post('addnewroom', [RoomController::class , 'store'])->name('addnewroom');
     
 });
 
-Route::view('master', 'layouts.master');
-Route::view('/', 'login')->name('login');
-Route::post('/login', [LoginController::class , 'login']);
-Route::post('/createUser', [UserController::class , 'store']);
+Route::group(['middleware' => ['guest']], function () {
+    Route::view('/showlogin', 'login')->name('login');
+    Route::post('/login', [LoginController::class , 'login']);
+    Route::get('/logout', [LoginController::class , 'logout'])->name('logout')->withoutMiddleware('guest');
+    Route::post('/createUser', [UserController::class , 'store']);
+});
 
-Route::view('/admin', 'admin.newroom');
+
+Route::view('master', 'layouts.master');
+
 
 
 Route::fallback(

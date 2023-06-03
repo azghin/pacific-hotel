@@ -10,6 +10,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- Favicons -->
     <link href="assets/img/favicon.png" rel="icon">
@@ -19,7 +20,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.gstatic.com" rel="preconnect">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
+    
     <title>Admin</title>
 
     <style>
@@ -258,7 +259,6 @@
 <body id="body-pd">
     <header class="header" id="header">
         <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
-<<<<<<< HEAD
         <div><a href=""><h2>Pacific <span class="text-dark">Hotel</span></h2></a></div>
         <div class="pe-3" style="width: 50px; ">
             <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
@@ -266,10 +266,6 @@
             <span class="d-none d-md-block dropdown-toggle ps-2">K. Anderson</span>
           </a>
         </div>
-=======
-        <div><a href=""><h2>Pacific <span class="text-dark">hotel</span></h2></a></div>
-        <div class="header_img" style="width: 50px; "> <img src="https://example.com/image.jpg" alt="Image Description"> </div>
->>>>>>> aeac7bce22b740ddbc0ce440f364d8d6fe1e2b8c
     </header>
     <div class="l-navbar" id="nav-bar">
         <nav class="nav">
@@ -277,28 +273,22 @@
                 <div class="nav_list"> 
                     <a href="{{ Route('admin.dashboard') }}" class="nav_link "> <i class='bx bx-grid-alt nav_icon'></i> <span class="nav_name">Dashboard</span> </a> 
                     <a href="{{ Route('admin.users') }}" class="nav_link "> <i class='bx bx-user nav_icon'></i> <span class="nav_name">Users</span> </a> 
-<<<<<<< HEAD
                     <a href="#" class="nav_link"> <i class='bx bx-message-square-detail nav_icon'></i> <span class="nav_name">Messages</span> </a> 
                     <a href="#" class="nav_link"> <i class='bx bx-bookmark nav_icon'></i> <span class="nav_name">Bookmark</span> </a> 
                     <a href="{{ Route('admin.profil') }}" class="nav_link"> <i class='bx bx-folder nav_icon'></i> <span class="nav_name">Profil</span> </a> 
                     <a href="#" class="nav_link"> <i class='bx bx-bar-chart-alt-2 nav_icon'></i> <span class="nav_name">Stats</span> </a> 
-=======
-                    <a href="#" class="nav_link"> <i class='bi bi-building nav_icon'></i> <span class="nav_name">Rooms</span> </a> 
-                    <a href="#" class="nav_link"> <i class='bi bi-building-add nav_icon'></i> <span class="nav_name">New Room</span> </a> 
+                    <a href="{{ Route('admin.rooms') }}" class="nav_link"> <i class='bi bi-building nav_icon'></i> <span class="nav_name">Rooms</span> </a> 
+                    <a href="{{ Route('admin.newroom') }}" class="nav_link"> <i class='bi bi-building-add nav_icon'></i> <span class="nav_name">New Room</span> </a> 
                     <a href="#" class="nav_link"> <i class='bi bi-card-checklist nav_icon'></i> <span class="nav_name">Reservations</span> </a> 
                     {{-- <a href="#" class="nav_link"> <i class='bx bx-bar-chart-alt-2 nav_icon'></i> <span class="nav_name">Stats</span> </a>  --}}
->>>>>>> aeac7bce22b740ddbc0ce440f364d8d6fe1e2b8c
                 </div>
-            </div> <a href="#" class="nav_link"> <i class='bx bx-log-out nav_icon'></i> <span class="nav_name">SignOut</span> </a>
+            </div> <a href="{{ Route('logout') }}" class="nav_link"> <i class='bx bx-log-out nav_icon'></i> <span class="nav_name">SignOut</span> </a>
         </nav>
     </div>
     <!--Container Main start-->
-<<<<<<< HEAD
     <main id="main" class="main">
-=======
     <div class="height-100 bg-light">
         <h4>Main content</h4>
->>>>>>> aeac7bce22b740ddbc0ce440f364d8d6fe1e2b8c
         @yield('content')
     </main>
     <!--Container Main end-->

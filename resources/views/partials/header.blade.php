@@ -5,14 +5,40 @@
         <div class="col-6 col-lg-8">
 
 
-          
-          
+          <div class="site-menu-toggle js-site-menu-toggle"  data-aos="fade">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <!-- END menu-toggle -->
 
-          
+          <div class="site-navbar js-site-navbar">
+            <nav role="navigation">
+              <div class="container">
+                <div class="row full-height align-items-center">
+                  <div class="col-md-6 mx-auto">
+                    <ul class="list-unstyled menu">
+                      <li class=".nav_link active"><a href="{{ Route('home') }}">Home</a></li>
+                      <li class=".nav_link "><a href="{{ Route('client.rooms') }}">Rooms</a></li>
+                      <li class=".nav_link "><a href="{{ Route('client.about') }}">About</a></li>
+                      <li class=".nav_link "><a href="{{ Route('client.contact') }}">Contact</a></li>
+                      <li class=".nav_link "><a href="{{ Route('client.reservation') }}">Reservation</a></li>
+                      @guest
+                      <li><a href="{{ Route('login') }}">Login</a></li>
+                      @endguest
+                      @auth
+                      <li><a href="{{ Route('logout') }}">logout</a></li>
+                      @endauth
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </nav>
+          </div>
         </div>
       </div>
     </div>
-</header>
+  </header>
   <section class="site-hero overlay" style="background-image: url(../images/hero_4.jpg)" data-stellar-background-ratio="0.5">
     <div class="container">
       <div class="row site-hero-inner justify-content-center align-items-center">
@@ -29,3 +55,14 @@
       </div>
     </a>
   </section>
+
+  <script>
+    const linkColor = document.querySelectorAll('.nav_link')
+        
+    function colorLink(){
+    if(linkColor){
+    linkColor.forEach(l=> l.classList.remove('active'))
+    this.classList.add('active')
+    }
+    }
+  </script>

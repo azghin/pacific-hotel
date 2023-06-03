@@ -26,10 +26,10 @@ class LoginController extends Controller
             if(Auth::user()->user_type == 'admin'){
                 return redirect('/admin/dashboard');
             }else{
-                return redirect('/client/home');
+                return redirect('/');
             }
 
-            return redirect('/client/home');
+            return redirect('/');
         }else{
             return back()->withErrors([
                 'email'=> 'Email ou mot de passe incorrect.'
@@ -38,5 +38,14 @@ class LoginController extends Controller
         };
 
         
+    }
+
+    public function logout()
+    {
+        Session::flush();
+
+        Auth::logout();
+
+        return redirect('/');
     }
 }

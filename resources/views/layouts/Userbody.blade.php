@@ -273,15 +273,12 @@
             <div> <a href="#" class="nav_logo"> <i class='bx bx-layer nav_logo-icon'></i> <span class="nav_logo-name">PACIFIC HOTEL</span> </a>
                 <div class="nav_list"> 
                     <a href="{{ Route('admin.dashboard') }}" class="nav_link "> <i class='bx bx-grid-alt nav_icon'></i> <span class="nav_name">Dashboard</span> </a> 
-                    <a href="{{ Route('admin.users') }}" class="nav_link "> <i class='bx bx-user nav_icon'></i> <span class="nav_name">Users</span> </a> 
-                    <a href="#" class="nav_link"> <i class='bx bx-message-square-detail nav_icon'></i> <span class="nav_name">Messages</span> </a> 
-                    <a href="#" class="nav_link"> <i class='bx bx-bookmark nav_icon'></i> <span class="nav_name">Bookmark</span> </a> 
-                    <a href="{{ Route('admin.profil') }}" class="nav_link"> <i class='bx bx-folder nav_icon'></i> <span class="nav_name">Profil</span> </a> 
-                    <a href="#" class="nav_link"> <i class='bx bx-bar-chart-alt-2 nav_icon'></i> <span class="nav_name">Stats</span> </a> 
                     <a href="{{ Route('admin.rooms') }}" class="nav_link"> <i class='bi bi-building nav_icon'></i> <span class="nav_name">Rooms</span> </a> 
                     <a href="{{ Route('admin.newroom') }}" class="nav_link"> <i class='bi bi-building-add nav_icon'></i> <span class="nav_name">New Room</span> </a> 
-                    <a href="#" class="nav_link"> <i class='bi bi-card-checklist nav_icon'></i> <span class="nav_name">Reservations</span> </a> 
-                    {{-- <a href="#" class="nav_link"> <i class='bx bx-bar-chart-alt-2 nav_icon'></i> <span class="nav_name">Stats</span> </a>  --}}
+                    <a href="{{Route('admin.reservation')}}" class="nav_link"> <i class='bi bi-card-checklist nav_icon'></i> <span class="nav_name">Reservations</span> </a> 
+                    <a href="{{Route('admin.review')}}" class="nav_link"> <i class='bi bi-layout-text-sidebar-reverse nav_icon'></i> <span class="nav_name">reviews</span> </a> 
+                    <a href="{{ Route('admin.users') }}" class="nav_link "> <i class='bi bi-people-fill nav_icon'></i> <span class="nav_name">Users</span> </a> 
+                    <a href="{{ Route('admin.profil') }}" class="nav_link"> <i class='bi bi-person-fill nav_icon'></i> <span class="nav_name">Profil</span> </a> 
                 </div>
             </div> <a href="{{ Route('logout') }}" class="nav_link"> <i class='bx bx-log-out nav_icon'></i> <span class="nav_name">SignOut</span> </a>
         </nav>

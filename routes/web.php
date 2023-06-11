@@ -32,6 +32,8 @@ Route::group(['prefix' => 'admin','as'=>'admin.','middleware'=>['auth','isAdmin'
     Route::view('dashboard', 'admin.dashboard')->name('dashboard');
     Route::view('users', 'admin.users')->name('users');
     Route::view('profil', 'admin.profil')->name('profil');
+    Route::view('reservation', 'admin.reservation')->name('reservation');
+    Route::view('review', 'admin.review')->name('review');
     Route::get('rooms', [RoomController::class , 'index'])->name('rooms');
     Route::get('newroom', [RoomController::class , 'create'])->name('newroom');
     Route::post('addnewroom', [RoomController::class , 'store'])->name('addnewroom');

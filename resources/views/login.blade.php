@@ -274,8 +274,18 @@ footer a {
     color: #3c97bf;
     text-decoration: none;
 }
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
 </style>
 <body>
+	<video autoplay muted loop id="myVideo">
+		<source src="https://static.videezy.com/system/resources/previews/000/041/775/original/MVI_5653.mp4" type="video/mp4">
+	  </video>
 <div class="container" id="container">
 	<div class="form-container sign-up-container">
 		<form action="/createUser" method="post" >

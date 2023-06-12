@@ -57,3 +57,5 @@ Route::fallback(
         return view('page404');
     }
 );
+
+Route::view('profil', 'admin.profil');

@@ -70,8 +70,8 @@ a {
 
 button {
 	border-radius: 20px;
-	border: 1px solid #FF4B2B;
-	background-color: #FF4B2B;
+	border: 1px solid #FFFFFF;
+	background-color: #1c1069;
 	color: #FFFFFF;
 	font-size: 12px;
 	font-weight: bold;
@@ -184,9 +184,9 @@ input {
 }
 
 .overlay {
-	background: #FF416C;
-	background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
-	background: linear-gradient(to right, #FF4B2B, #FF416C);
+	background: #5a41ff;
+	background: -webkit-linear-gradient(to right, #5a41ff, #1c1069);
+	background: linear-gradient(to right, #5a41ff, #1c1069);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 0 0;
@@ -276,17 +276,16 @@ footer a {
 }
 </style>
 <body>
-<h2>Weekly Coding Challenge #1: Sign in/up Form</h2>
 <div class="container" id="container">
 	<div class="form-container sign-up-container">
 		<form action="/createUser" method="post" >
 			@csrf
 			<h1>Create Account</h1>
-			<div class="social-container">
+			{{-- <div class="social-container">
 				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
 				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
 				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-			</div>
+			</div> --}}
 			<span>or use your email for registration</span>
 			<input type="text" name="name" placeholder="Name" value="{{ old('name') }}" />
 			@error('name')
@@ -311,11 +310,11 @@ footer a {
 		<form action="/login" method="post">
 			@csrf
 			<h1>Sign in</h1>
-			<div class="social-container">
+			{{-- <div class="social-container">
 				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
 				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
 				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-			</div>
+			</div> --}}
 			<span>or use your account</span>
 			<input type="email" placeholder="Email" name="email" value="{{ old('email') }}" >
 			@error('email')
@@ -348,10 +347,7 @@ footer a {
 
 <footer>
 	<p>
-		Created with <i class="fa fa-heart"></i> by
-		<a target="_blank" href="https://florin-pop.com">Florin Pop</a>
-		- Read how I created this and how you can join the challenge
-		<a target="_blank" href="https://www.florin-pop.com/blog/2019/03/double-slider-sign-in-up-form/">here</a>.
+		pacific hotel
 	</p>
 </footer>
 

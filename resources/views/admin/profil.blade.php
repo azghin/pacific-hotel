@@ -1,14 +1,11 @@
 @extends('layouts.Userbody')
 @section('content')
+<style>
+  .active{
+    color: black;
+  }
+</style>
 <div class="pagetitle">
-    <h1>Dashboard</h1>
-    <nav>
-    <ol class="breadcrumb" >
-        <li class="breadcrumb-item"><a href="">Home</a></li>
-        <li class="breadcrumb-item active">Dashboard</li>
-    </ol>
-    </nav>
-</div>
 <section class="section profile">
       <div class="row">
         <div class="col-xl-4">
@@ -35,28 +32,29 @@
           <div class="card">
             <div class="card-body pt-3">
               <!-- Bordered Tabs -->
-              <ul class="nav nav-tabs nav-tabs-bordered">
+              <ul class="list-group list-group-horizontal">
 
-                <li class="nav-item">
-                  <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#profile-overview">Overview</button>
+                <li class="list-group-item">
+                  <a class="nav-link active" data-bs-toggle="tab" data-bs-target="#profile-overview">Overview</a>
                 </li>
 
-                <li class="nav-item">
-                  <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-edit">Edit Profile</button>
+                <li class="list-group-item">
+                  <a class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-edit">Edit Profile</a>
                 </li>
 
-                <li class="nav-item">
-                  <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-settings">Settings</button>
+                <li class="list-group-item">
+                  <a class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-settings">Settings</a>
                 </li>
 
-                <li class="nav-item">
-                  <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-change-password">Change Password</button>
+                <li class="list-group-item">
+                  <a class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-change-password">Change Password</a>
                 </li>
 
               </ul>
+              <!-- Horizontal under breakpoint -->
               <div class="tab-content pt-2">
 
-                <div class="tab-pane fade show active profile-overview" id="profile-overview">
+                <div class="tab-pane fade show active profile-overview w-100" id="profile-overview">
                   <h5 class="card-title">About</h5>
                   <p class="small fst-italic">Sunt est soluta temporibus accusantium neque nam maiores cumque temporibus. Tempora libero non est unde veniam est qui dolor. Ut sunt iure rerum quae quisquam autem eveniet perspiciatis odit. Fuga sequi sed ea saepe at unde.</p>
 
@@ -99,7 +97,7 @@
 
                 </div>
 
-                <div class="tab-pane fade profile-edit pt-3" id="profile-edit">
+                <div class="tab-pane fade profile-edit pt-3 w-100" id="profile-edit">
 
                   <!-- Profile Edit Form -->
                   <form>
@@ -205,7 +203,7 @@
 
                 </div>
 
-                <div class="tab-pane fade pt-3" id="profile-settings">
+                <div class="tab-pane fade pt-3 w-100" id="profile-settings">
 
                   <!-- Settings Form -->
                   <form>
@@ -247,7 +245,7 @@
 
                 </div>
 
-                <div class="tab-pane fade pt-3" id="profile-change-password">
+                <div class="tab-pane fade pt-3 w-100" id="profile-change-password">
                   <!-- Change Password Form -->
                   <form>
 

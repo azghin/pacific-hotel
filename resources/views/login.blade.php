@@ -24,7 +24,6 @@
 }
 
 body {
-	background: #f6f5f7;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -32,6 +31,14 @@ body {
 	font-family: 'Montserrat', sans-serif;
 	height: 100vh;
 	margin: -20px 0 50px;
+}
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width : 100%;
+  height : auto;
 }
 .form-inline{
 	padding: 0 15px;
@@ -274,18 +281,13 @@ footer a {
     color: #3c97bf;
     text-decoration: none;
 }
-#myVideo {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-}
+
 </style>
 <body>
 	<video autoplay muted loop id="myVideo">
-		<source src="https://static.videezy.com/system/resources/previews/000/041/775/original/MVI_5653.mp4" type="video/mp4">
-	  </video>
+		<source src="../images/video.mp4" type="video/mp4">
+	</video>
+	
 <div class="container" id="container">
 	<div class="form-container sign-up-container">
 		<form action="/createUser" method="post" >

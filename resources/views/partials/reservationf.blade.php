@@ -64,8 +64,16 @@
 
             <div class="row mb-4">
               <div class="col-md-12 form-group">
-                <label class="text-black font-weight-bold" for="message">Notes</label>
-                <textarea name="message" id="message" class="form-control " cols="30" rows="8"></textarea>
+                <label class="text-black font-weight-bold" for="message">Type rooms</label>
+                <div class="field-icon-wrap">
+                  <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                  <select name="" id="children" class="form-control">
+                    <option value="">hahahah</option>
+                    <option value="">hahha</option>
+                    <option value="">hahah</option>
+                    <option value="">hahahah+</option>
+                  </select>
+                </div>
               </div>
             </div>
             <div class="row">

@@ -91,8 +91,8 @@
             <div class="col-md-10 ml-auto contact-info">
               @foreach($hotels as $hotel)
               <p><span class="d-block">Address:</span> <span class="text-black"> {{ $hotel->address }}  {{ $hotel->country }}</span></p>
-              <p><span class="d-block">Phone:</span> <span class="text-black"> (+1) 435 3533</span></p>
-              <p><span class="d-block">Email:</span> <span class="text-black"> info@yourdomain.com</span></p>
+              <p><span class="d-block">Phone:</span> <span class="text-black"> (+212) {{ $hotel->phone }} </span></p>
+              <p><span class="d-block">Email:</span> <span class="text-black"> {{ $hotel->email }} </span></p>
               @endforeach
             </div>
           </div>

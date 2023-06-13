@@ -319,7 +319,7 @@ footer a {
 		</form>
 	</div>
 	<div class="form-container sign-in-container">
-		<form action="/login" method="post">
+		<form action="/login" method="post" id="Sign">
 			@csrf
 			<h1>Sign in</h1>
 			{{-- <div class="social-container">
@@ -337,8 +337,17 @@ footer a {
 			 <span class="text-muted">{{ $message }}</span>
 			@enderror
 			<input type="checkbox" name="check" id="check">show Password
-			<a href="#">Forgot your password?</a>
+			<a href="#" id="btnForget">Forgot your password?</a>
 			<button>Sign In</button>
+		</form>
+		<form action="" method="" style="margin-top: 120px;" id="forget" >
+			@csrf
+			<h3 style="margin-bottom: 40px;"><b>Reset Password</b></h3>
+			<input type="email" placeholder="Email" name="email" value="{{ old('email') }}" >
+			@error('email')
+			 <span class="text-muted">{{ $message }}</span>
+			@enderror
+			<button style="margin-top: 20px;">Forget Password</button>
 		</form>
 	</div>
 	<div class="overlay-container">
@@ -370,12 +379,25 @@ footer a {
 	const check = document.getElementById('check');
 	const password = document.getElementById('password');
 
+	const btnForget = document.getElementById('btnForget');
+	const FormSign = document.getElementById('Sign');
+	const FormForget = document.getElementById('forget');
+
 	signUpButton.addEventListener('click', () => {
 		container.classList.add("right-panel-active");
 	});
 
 	signInButton.addEventListener('click', () => {
 		container.classList.remove("right-panel-active");
+
+		
+		FormForget.style.display = "none";
+		FormSign.style.display = "block";
+	});
+
+	btnForget.addEventListener('click', () => {
+		FormSign.style.display = "none";
+		FormForget.style.display = "block";
 	});
 
 	check.onclick = togglePassword;

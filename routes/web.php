@@ -40,6 +40,7 @@ Route::group(['prefix' => 'admin','as'=>'admin.','middleware'=>['auth','isAdmin'
     Route::get('newroom', [RoomController::class , 'create'])->name('newroom');
     Route::post('addnewroom', [RoomController::class , 'store'])->name('addnewroom');
     
+    
 });
 
 Route::group(['middleware' => ['guest']], function () {

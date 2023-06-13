@@ -17,4 +17,7 @@ class ReservationController extends Controller
 
         return view('admin.reservation' , ['Bookings'=>$Bookings ]);
     }
+    
+
+
 }

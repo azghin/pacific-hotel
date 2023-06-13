@@ -17,6 +17,7 @@
                     <th>Start date</th>
                     <th>end date</th>
                     <th>Total price</th>
+                    <th>status</th>
                 </tr>
                 </thead>
                 <tbody class="table-group-divider">
@@ -28,6 +29,28 @@
                             <td>{{ $Booking->start_date}}</td>
                             <td>{{ $Booking->end_date}}</td>
                             <td>{{ $Booking->total_price}}</td>
+                            <td>
+                                @if( $Booking->checked === "Not yet confirmed")
+                                    <span class="badge bg-warning">
+                                        {{ $Booking->checked}}
+                                    </span>
+                                @endif
+                                @if( $Booking->checked === "confirmed")
+                                    <span class="badge bg-success">
+                                        {{ $Booking->checked}}
+                                    </span>
+                                @endif
+                                @if( $Booking->checked === "not confirmed")
+                                    <span class="badge bg-danger">
+                                        {{ $Booking->checked}}
+                                    </span>
+                                @endif
+                                @if( $Booking->checked === "expired")
+                                    <span class="badge bg-primary">
+                                        {{ $Booking->checked}}
+                                    </span>
+                                @endif
+                            </td>
                         </tr>
                     @endforeach
                 </tbody>

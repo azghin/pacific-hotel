@@ -45,6 +45,7 @@
             transition: .5s
         }
         
+        
 
         body {
             font-family: "Open Sans", sans-serif;
@@ -107,6 +108,9 @@
             .show{width: calc(var(--nav-width) + 156px)}
             .body-pd{padding-left: calc(var(--nav-width) + 188px)}
         }
+        #main .show{
+                width: 100%;
+            }
         
         .breadcrumb {
             font-size: 20px;

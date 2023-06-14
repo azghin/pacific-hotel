@@ -44,7 +44,7 @@
                     <form action="" method="post" class="form-card" enctype="multipart/form-data">
                         @csrf
                         <div class="row justify-content-between text-left">
-                            <div class="form-group col-sm-6 flex-column d-flex"> 
+                            <div class="form-group col-sm-12 flex-column d-flex"> 
                                 <label class="form-control-label px-3">image<span class="text-danger"> *</span></label> 
                                 <input type="file" id="photo" name="photo"  > 
                             </div>
@@ -76,7 +76,7 @@
                             </div>
                         </div>
                         <div class="row justify-content-end">
-                            <div class="form-group col-sm-6"> <button type="submit" class="btn-block btn-primary">Add</button> </div>
+                            <div class="form-group col-sm-12"> <button type="submit" class="btn-block btn-primary">Add</button> </div>
                         </div>
                     </form>
                     </div>

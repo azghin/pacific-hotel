@@ -19,9 +19,11 @@
         </div>
         <div class="col-md-3 mb-5 pr-md-5 contact-info">
           <!-- <li>198 West 21th Street, <br> Suite 721 New York NY 10016</li> -->
-          <p><span class="d-block"><i class="fa-sharp fa-solid fa-location-dot fa-lg" style="color: #d9b70d;"></i>  Address:</span> <span> 198 West 21th Street, <br> Suite 721 New York NY 10016</span></p>
-          <p><span class="d-block"><i class="fa-sharp fa-solid fa-phone fa-lg" style="color: #d9b70d;"></i>  Phone:</span> <span> (+1) 435 3533</span></p>
-          <p><span class="d-block"><i class="fa-sharp fa-solid fa-envelope fa-lg" style="color: #d9b70d;"></i>  Email:</span> <span> info@domain.com</span></p>
+          @foreach($hotels as $hotel)
+          <p><span class="d-block"><i class="fa-sharp fa-solid fa-location-dot fa-lg" style="color: #d9b70d;"></i>  Address:</span> <span> {{ $hotel->address }} <br> {{ $hotel->country }}</span></p>
+          <p><span class="d-block"><i class="fa-sharp fa-solid fa-phone fa-lg" style="color: #d9b70d;"></i>  Phone:</span> <span> (+212) {{ $hotel->phone }}</span></p>
+          <p><span class="d-block"><i class="fa-sharp fa-solid fa-envelope fa-lg" style="color: #d9b70d;"></i>  Email:</span> <span> {{ $hotel->email }}</span></p>
+          @endforeach
         </div>
         <div class="col-md-3 mb-5">
           <p>Sign up for our newsletter</p>
@@ -36,7 +38,7 @@
       <div class="row pt-5">
         <p class="col-md-6 text-left">
           <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-          Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+          Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved </a>
           <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
         </p>
           

@@ -8,6 +8,7 @@ use App\Http\Controllers\CardRoomController;
 use App\Http\Controllers\RoomController;
 use App\Http\Controllers\BookingController;
 use App\Http\Controllers\ReservationController;
+use App\Http\Controllers\HotelController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,19 +21,19 @@ use App\Http\Controllers\ReservationController;
 |
 */
 
-Route::view('/', 'clients.home')->name('home');
+Route::get('/', [HotelController::class , 'index'])->name('home');
 
 Route::group(['prefix' => 'client','as'=>'client.','middleware'=>['auth','isClient']],function () { 
     Route::get('rooms' , [CardRoomController::class , 'index'])->name('rooms');
-    Route::view('about', 'clients.about_us')->name('about');
-    Route::view('contact', 'clients.contact')->name('contact');
+    Route::get('about', [HotelController::class , 'indexAbout'])->name('about');
+    Route::get('contact', [HotelController::class , 'indexContact'])->name('contact');
     Route::get('reservation', [BookingController::class , 'index'])->name('reservation');
     Route::post('pdf', [BookingController::class , 'store'])->name('pdf');
 });
 
 Route::group(['prefix' => 'admin','as'=>'admin.','middleware'=>['auth','isAdmin']],function () {
     Route::view('dashboard', 'admin.dashboard')->name('dashboard');
-    Route::view('users', 'admin.users')->name('users');
+    Route::get('users', [UserController::class , 'index'])->name('users');
     Route::view('profil', 'admin.profil')->name('profil');
     Route::get('reservation', [ReservationController::class , 'index'])->name('reservation');
     Route::view('review', 'admin.review')->name('review');

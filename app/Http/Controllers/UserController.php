@@ -8,6 +8,14 @@ use App\Models\User;
 
 class UserController extends Controller
 {
+    public function index()
+    {
+
+        $users = User::all();
+        
+
+        return view('admin.users' , ['users'=>$users ]);
+    }
     public function store(Request $request)
     {
         $request->validate([

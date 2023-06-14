@@ -38,9 +38,11 @@
         <div class="col-md-5" data-aos="fade-up" data-aos-delay="200">
           <div class="row">
             <div class="col-md-10 ml-auto contact-info">
-              <p><span class="d-block">Address:</span> <span> 98 West 21th Street, Suite 721 New York NY 10016</span></p>
-              <p><span class="d-block">Phone:</span> <span> (+1) 234 4567 8910</span></p>
-              <p><span class="d-block">Email:</span> <span> info@domain.com</span></p>
+            @foreach($hotels as $hotel)
+              <p><span class="d-block">Address:</span> <span> {{ $hotel->address }} {{ $hotel->country }} </span></p>
+              <p><span class="d-block">Phone:</span> <span> (+212) {{ $hotel->phone }} </span></p>
+              <p><span class="d-block">Email:</span> <span> {{ $hotel->email }} </span></p>
+            @endforeach
             </div>
           </div>
         </div>

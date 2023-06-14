@@ -16,43 +16,43 @@
             <div class="mb-3 row">
                 <label for="inputName" class="col-4 col-form-label">Name and last name</label>
                 <div class="col-8">
-                    <p>name here</p>
+                    <p>{{ $user->username }}</p>
                 </div>
             </div>
             <div class="mb-3 row">
                 <label for="inputName" class="col-4 col-form-label">Check in</label>
                 <div class="col-8">
-                    <p>check in</p>
+                    <p>{{ $checkin}}</p>
                 </div>
             </div>
             <div class="mb-3 row">
                 <label for="inputName" class="col-4 col-form-label">Check out</label>
                 <div class="col-8">
-                    <p>check out</p>
+                    <p>{{ $checkout}}</p>
                 </div>
             </div>
             <div class="mb-3 row">
                 <label for="inputName" class="col-4 col-form-label">Room</label>
                 <div class="col-8">
-                    <p>room</p>
+                    <p>{{ $room}}</p>
                 </div>
             </div>
             <div class="mb-3 row">
                 <label for="inputName" class="col-4 col-form-label">Room deatils</label>
                 <div class="col-8">
-                    <p>details</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam nostrum, minima ipsam saepe dolorem vel facere. Deserunt blanditiis, aliquam dolores quae fugiat quod laudantium fugit nulla! Nobis minus provident amet.</p>
                 </div>
             </div>
             <div class="mb-3 row">
                 <label for="inputName" class="col-4 col-form-label">price</label>
                 <div class="col-8">
-                    <p>mnyoooon</p>
+                    <p>{{ $price}} <span class="text-muted">MAD</span></p>
                 </div>
             </div>
             
             <div class="mb-3 row">
                 <div class="offset-sm-4 col-sm-8">
-                    <p>QR</p>
+                    <p><img src="{{ $qrcodeDataUri }}" alt="QR Code"></p>
                 </div>
             </div>
         

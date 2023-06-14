@@ -14,8 +14,9 @@ class RoomController extends Controller
 
         $rooms = Room::all();
         
+        
 
-        return view('admin.rooms' , ['rooms'=>$rooms ]);
+        return view('admin.rooms' , ['rooms'=>$rooms  ]);
     }
 
     public function create()
@@ -27,9 +28,12 @@ class RoomController extends Controller
     }
     public function store(Request $request)
     {
+
         $image = $request->file('photo');
         $fileName = time().'.'.$image->getClientOriginalExtension();
         $image->storeAs('public/images', $fileName);
+
+        
 
         $room = new Room;
         $room->room_number = $request->input('room_number');

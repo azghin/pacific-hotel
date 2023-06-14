@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Room;
+use App\Models\Hotel;
 
 class CardRoomController extends Controller
 {
@@ -11,7 +12,8 @@ class CardRoomController extends Controller
     {
 
         $rooms = Room::all();
+        $hotels = Hotel::all();
 
-        return view('clients.rooms' , ['rooms'=>$rooms ]);
+        return view('clients.rooms' , ['rooms'=>$rooms , 'hotels'=>$hotels  ]);
     }
 }

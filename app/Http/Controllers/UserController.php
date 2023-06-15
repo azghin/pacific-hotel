@@ -32,7 +32,7 @@ class UserController extends Controller
         $user->password = hash::make($request->password);
         $user->save();
 
-        return redirect()->route('client/home');
+        return redirect()->route('login');
         
     }
         

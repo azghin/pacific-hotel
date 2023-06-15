@@ -295,7 +295,7 @@
     <!--Container Main start-->
     <main id="main" class="main">
       <div class="height-100 bg-light">
-        <h4>Main content</h4>
+        
         @yield('content')
       </div>
     </main>
